@@ -1,12 +1,12 @@
-from functools import cache
+from functools import lru_cache
 
 
-@cache
-def fib(n):
+@lru_cache
+def fibonacci(n):
     if n < 3:
         return n
-    return fib(n - 1) + fib(n - 2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 if __name__ == '__main__':
-    fib(200)
+    fibonacci(200)
