@@ -1,3 +1,7 @@
+from functools import cache
+
+
+@cache
 def fib(n):
     if n < 3:
         return n
@@ -5,4 +9,4 @@ def fib(n):
 
 
 if __name__ == '__main__':
-    fib(10)
+    fib(200)
